@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+:root {
+    /* color */
+    --pri-red: hsl(0, 78%, 62%);
+    --pri-cyan: hsl(180, 62%, 55%);
+    --pri-orange: hsl(34, 97%, 64%);
+    --pri-blue: hsl(212, 86%, 64%);
+
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background: var(--light-gray);
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    padding-top: 40px;
+}
+
+.container {
+    display: grid;
+    text-align: center;
+    width: 70%;
+    margin: 70px auto;
+    height: 80vh;
+    background: var(--light-gray);
+    box-shadow: 0 8px 20px rgba(50, 50, 200, .15)
+    
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.card-item {
+    height: 150px;
+    width: 250px;
+    text-align: left;
+    border-radius: 5px;
+    padding-left: 18px;
+    padding-top: 18px;
+    padding-right: 18px;
+    box-shadow: 0 8px 20px rgba(50, 50, 200, .15);
+}
+
+.left {
+    margin-right: 15px;
+    border-top: 3px solid var(--pri-cyan);
+}
+
+.right {
+    margin-left: 15px;
+    border-top: 3px solid var(--pri-blue);
+}
+
+.move-down {
+    margin-top: 5rem;
+}
+
+.top {
+    margin-bottom: 15px;
+    border-top: 3px solid var(--pri-red);
+}
+
+.bottom {
+    border-top: 3px solid var(--pri-orange);
+    padding-bottom: 50px;
+}
+
+div > p {
+    font-size: 10px;
+    margin-top: 5px;
+}
+div > h4 {
+    font-weight: 600;
+}
+
+.header > h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+.header > #up {
+    font-size: 22px;
+    font-weight: 200;
+}
+.header > #down {
+    font-size: 10px;
+    font-weight: 200;
+}
+
+img {
+    width: 45px;
+    height: 45px;
+    margin: 10px 170px;
+}
+
+/* Media Queries */
+@media (max-width: 1100px) {
+    .header > h2 {
+        font-size: 20px;
+    }
+    .header > #up {
+        font-size: 20px;
+    }
+    .header > #down {
+        font-size: 9px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: 100%;
+        grid-template-areas: 
+            'left'
+            'middle'
+            'right'
+        ; */
+        width: 70%;
+        height: 0;
+        margin: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .left {
+        margin-top: 15px;
+    }
+
+    .middle {
+        margin-top: 15px;
+    }
+
+    .right {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+}
